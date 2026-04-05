@@ -24,7 +24,12 @@ jobs:
             -configuration Release \
             -derivedDataPath build \
             -arch arm64 -arch x86_64 \
-            build
+            build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            MACOSX_DEPLOYMENT_TARGET=26.2
       
       - name: Create DMG
         run: |
