@@ -56,11 +56,11 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
       
       - name: Create Release and Upload DMG
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Pomia ${{ steps.version.outputs.VERSION }}
-          files: Pomia.dmg
-          generate_release_notes: true
+        run: |
+          gh release create ${{ steps.version.outputs.VERSION }} \
+            --title "Pomia ${{ steps.version.outputs.VERSION }}" \
+            --generate-notes \
+            Pomia.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
