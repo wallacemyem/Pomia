@@ -1,5 +1,7 @@
 # Pomia
 
+[![Build and Release DMG](https://github.com/wallacemyem/Pomia/actions/workflows/release-dmg.yml/badge.svg)](https://github.com/wallacemyem/Pomia/actions/workflows/release-dmg.yml)
+
 Pomia is a macOS chat app that connects to a local Apfel server for Apple Intelligence-powered conversations. It provides streaming AI responses, quick reply prompts, keyboard shortcuts, and built-in server control.
 
 ## Features
