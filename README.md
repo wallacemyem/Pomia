@@ -17,7 +17,7 @@ Pomia is a macOS chat app that connects to a local Apfel server for Apple Intell
 ## Requirements
 
 - macOS 14 or later
-- Xcode 15 or later
+- Xcode 15 or later for dev 
 - Homebrew (recommended for installing `apfel`)
 - `apfel` command-line tool
 
