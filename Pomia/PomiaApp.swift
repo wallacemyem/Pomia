@@ -13,5 +13,25 @@ struct PomiaApp: App {
         WindowGroup {
             ContentView()
         }
+        .commands {
+            CommandMenu("Pomia") {
+                Button("Send Message") {
+                    NotificationCenter.default.post(name: .pomiaSendMessage, object: nil)
+                }
+                .keyboardShortcut(.return, modifiers: [.command])
+
+                Button("Focus Message Input") {
+                    NotificationCenter.default.post(name: .pomiaFocusInput, object: nil)
+                }
+                .keyboardShortcut("k", modifiers: [.command])
+
+                Divider()
+
+                Button("Start Apfel Server") {
+                    NotificationCenter.default.post(name: .pomiaStartServer, object: nil)
+                }
+                .keyboardShortcut("s", modifiers: [.command, .option])
+            }
+        }
     }
 }
